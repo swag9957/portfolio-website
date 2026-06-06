@@ -1,0 +1,177 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+    margin: 0;
+    color: white;
+
+    background: linear-gradient(
+        -45deg,
+        #0f172a,
+        #312e81,
+        #2563eb,
+        #0f172a
+    );
+
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 50px;
+background:#111;
+position:sticky;
+top:0;
+}
+
+ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+a{
+text-decoration:none;
+color:white;
+}
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+}
+
+.btn{
+display:inline-block;
+margin-top:20px;
+margin-right:10px;
+padding:12px 25px;
+background:#6C63FF;
+border-radius:5px;
+}
+
+section{
+padding:80px 50px;
+}
+
+.card{
+margin:20px 0;
+}
+
+.bar{
+height:10px;
+background:#333;
+border-radius:10px;
+}
+
+.fill{
+height:10px;
+background:#6C63FF;
+border-radius:10px;
+}
+
+.html{
+width:90%;
+}
+
+.css{
+width:85%;
+}
+
+.js{
+width:75%;
+}
+
+.node{
+    width:70%;
+}
+
+.mongo{
+    width:65%;
+}
+
+.project{
+background:#1a1a4e;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
+}
+
+input,textarea{
+width:100%;
+padding:10px;
+margin:10px 0;
+}
+
+button{
+
+padding:12px 25px;
+background:#6C63FF;
+border:none;
+border-radius: 8px;
+color:white;
+cursor:pointer;
+transition: 0.3s;
+}
+button:hover{
+    transform: scale(1.05);
+}
+.profile-img{
+    width: 270px;
+    height: 270px;
+    border-radius:50%;
+    object-fit:cover;
+    border:4px solid #6C63FF;
+    object-fit:cover;
+    object-position:center 10%;
+}
+.hero{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    transition:0.3s;
+}
+footer{
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 1px solid #333;
+}
+#contact{
+    max-width: 700px;
+    margin: auto;
+}
+#form-status{
+    color: lightgreen;
+    font-weight: bold;
+    margin-top: 10px;
+}
