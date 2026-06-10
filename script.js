@@ -1,14 +1,32 @@
 const form=document.getElementById("contactForm");
 const msg=document.getElementById("msg");
 
-form.addEventListener("submit",(e)=>{
+form.addEventListener("submit", async (e) => {
 
-e.preventDefault();
+    e.preventDefault();
 
-msg.innerHTML="Message Sent Successfully ✅";
+    const formData = new FormData(e.target);
 
-form.reset();
+    const data = {
+        name: formData.get("name"),
+        email: formData.get("email"),
+        subject: formData.get("subject"),
+        message: formData.get("message")
+    };
+console.log("Sending Data:", data);
+    const response = await fetch("http://localhost:3000/contact", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
 
+    const result = await response.json();
+
+    msg.innerHTML = result.message + " ✅";
+
+    form.reset();
 });
 window.onload = function () {
     document.querySelector(".html").style.width = "90%";
