@@ -2,7 +2,7 @@ const form=document.getElementById("contactForm");
 const msg=document.getElementById("msg");
 
 form.addEventListener("submit", async (e) => {
-console.log("Button clicked");
+
     e.preventDefault();
 
     const formData = new FormData(e.target);
